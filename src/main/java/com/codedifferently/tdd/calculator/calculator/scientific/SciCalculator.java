@@ -58,7 +58,7 @@ public class SciCalculator extends BasicCalculatorImp {
     }
 
     public static Double invNatLog(Double input) {
-        Double ln = Math.pow(10, (Double) input);
-        return ln;
+        Double invln = Math.pow(10, (Double) input);
+        return invln;
     }
 }
