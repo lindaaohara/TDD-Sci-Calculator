@@ -4,7 +4,6 @@ import com.codedifferently.tdd.calculator.calculator.basic.BasicCalculatorImp;
 
 public class SciCalculator extends BasicCalculatorImp {
 
-
     public SciCalculator(){
         super();
         /**
@@ -60,5 +59,14 @@ public class SciCalculator extends BasicCalculatorImp {
     public static Double invNatLog(Double input) {
         Double invln = Math.pow(10, (Double) input);
         return invln;
+    }
+
+    //public static void switchTrigMode() {
+    //    String mode = "Next option";
+    //}
+
+    public static String switchTrigMode(String input) {
+        String mode = input;
+        return mode;
     }
 }
