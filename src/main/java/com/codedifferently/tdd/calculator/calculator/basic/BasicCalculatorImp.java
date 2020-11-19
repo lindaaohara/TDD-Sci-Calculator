@@ -2,6 +2,7 @@ package com.codedifferently.tdd.calculator.calculator.basic;
 
 import com.codedifferently.tdd.calculator.calculator.memory.Memory;
 import com.codedifferently.tdd.calculator.calculator.memory.MemoryImplementation;
+import java.lang.Math;
 
 import static com.codedifferently.tdd.calculator.utils.CustomConsole.*;
 
@@ -9,6 +10,7 @@ public class BasicCalculatorImp implements Calculator{
     protected Memory memory;
 
     public BasicCalculatorImp(){
+
         this.memory = new MemoryImplementation();
     }
 
@@ -19,27 +21,41 @@ public class BasicCalculatorImp implements Calculator{
         println(message);
     }
 
+
     protected Double add(Double input){
-        return 0.0;
+        Double sum = input + memory.recallCurrentValue();
+        memory.setCurrentValue(sum);
+        return sum;
     }
 
     protected Double subtract(Double input){
-        return 0.0;
+        Double diff = memory.recallCurrentValue()-input;
+        memory.setCurrentValue(diff);
+        return diff;
     }
 
     protected Double multiply(Double input){
-        return 0.0;
+        Double product = memory.recallCurrentValue() * input;
+        memory.setCurrentValue(product);
+        return product;
     }
 
-    protected Double divide(Double input){
-        return 0.0;
+    protected Double divide(Double input) throws IllegalArgumentException{
+
+        Double quot = memory.recallCurrentValue()/input;
+        memory.setCurrentValue(quot);
+        return quot;
     }
 
     protected Double sq(Double input){
-        return 0.0;
+       Double square = input * input;
+       memory.setCurrentValue(square);
+        return square;
     }
 
     protected Double sqrt(Double input) {
-        return 0.0;
+        Double root = Math.sqrt(input);
+        memory.setCurrentValue(root);
+        return root;
     }
 }
