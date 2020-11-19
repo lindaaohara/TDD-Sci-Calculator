@@ -40,11 +40,14 @@ public class BasicCalculatorImp implements Calculator{
         return product;
     }
 
-    protected Double divide(Double input) throws IllegalArgumentException{
-
-        Double quot = memory.recallCurrentValue()/input;
+    protected Double divide(Double input){
+        if(input==0) {
+            throw new IllegalArgumentException("Cannot Divide by Zero");
+        }
+        Double quot = memory.recallCurrentValue() / input;
         memory.setCurrentValue(quot);
         return quot;
+
     }
 
     protected Double sq(Double input){

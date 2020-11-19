@@ -63,6 +63,16 @@ public class BasicCalculatorImpTest {
 
 }
 
+    @Test(expected=IllegalArgumentException.class)
+    public void testDivideByZero() throws Exception {
+
+        // Given
+        BasicCalculatorImp basicCalculatorImp = new BasicCalculatorImp();
+        basicCalculatorImp.memory.setCurrentValue(10.0);
+
+        Double actual = basicCalculatorImp.divide(0.0);
+
+    }
 
     @Test
     public void sq()  throws Exception {
