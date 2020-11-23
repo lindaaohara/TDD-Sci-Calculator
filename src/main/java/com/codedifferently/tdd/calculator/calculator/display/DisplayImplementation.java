@@ -11,6 +11,7 @@ public class DisplayImplementation implements Display{
 
     @Override
     public void switchDisplayMode() {
+
         switch (this.displayMode){
             case OCTAL:
                 this.displayMode = DisplayMode.BINARY;
@@ -35,10 +36,16 @@ public class DisplayImplementation implements Display{
 
 
 
+
+        this.displayMode = DisplayMode.DECIMAL;
     }
+
+
 
     @Override
     public String getCurrentDisplayMode() {
+
         return displayMode.name();
+
     }
 }

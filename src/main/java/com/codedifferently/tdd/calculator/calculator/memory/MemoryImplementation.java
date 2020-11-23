@@ -6,7 +6,7 @@ public class MemoryImplementation implements Memory{
     public MemoryImplementation(){
         this.currentValue = 0.0; }
 
-
+    @Override
     public void setCurrentValue(Double input) {
         this.currentValue = input;
     }
