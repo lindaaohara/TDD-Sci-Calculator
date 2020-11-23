@@ -71,11 +71,24 @@ public class SciCalculator extends BasicCalculatorImp {
     }
 
     public static void switchTrigMode() {
+
         addTrigMode();
     }
 
     public static String switchTrigMode(String input) {
-        String mode = input;
-        return mode;
+        List<String> trigOption = new ArrayList<>();
+        int idx = trigOption.indexOf(input);
+
+        if(idx < 0 || idx+1 == trigOption.size())
+            return "";
+        return trigOption.get(idx+1);
+    }
+
+    public static void main(String[] args){
+        List<String> trigOption = new ArrayList<>();
+
+        trigOption.add("Degrees");
+        trigOption.add("Radians");
+
     }
 }
