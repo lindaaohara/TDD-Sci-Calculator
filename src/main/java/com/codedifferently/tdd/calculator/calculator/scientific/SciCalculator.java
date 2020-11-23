@@ -2,6 +2,9 @@ package com.codedifferently.tdd.calculator.calculator.scientific;
 
 import com.codedifferently.tdd.calculator.calculator.basic.BasicCalculatorImp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SciCalculator extends BasicCalculatorImp {
 
     public SciCalculator(){
@@ -62,7 +65,9 @@ public class SciCalculator extends BasicCalculatorImp {
     }
 
     //public static void switchTrigMode() {
-    //    String mode = "Next option";
+    //    List<String> trigOption = new ArrayList<>();
+    //    trigOption.add("Degrees");
+    //    trigOption.add("Radians");
     //}
 
     public static String switchTrigMode(String input) {
