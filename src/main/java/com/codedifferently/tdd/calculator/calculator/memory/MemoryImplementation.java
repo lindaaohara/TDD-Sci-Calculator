@@ -4,21 +4,20 @@ public class MemoryImplementation implements Memory{
     private Double currentValue;
 
     public MemoryImplementation(){
-        this.currentValue = 0.0;
-    }
+        this.currentValue = 0.0; }
 
-    @Override
-    public void addToCurrentValue(Double input) {
 
+    public void setCurrentValue(Double input) {
+        this.currentValue = input;
     }
 
     @Override
     public void resetMemory() {
-
+        this.currentValue = 0.0;
     }
 
     @Override
     public Double recallCurrentValue() {
-        return null;
+        return this.currentValue;
     }
 }
