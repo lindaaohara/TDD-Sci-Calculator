@@ -64,11 +64,15 @@ public class SciCalculator extends BasicCalculatorImp {
         return invln;
     }
 
-    //public static void switchTrigMode() {
-    //    List<String> trigOption = new ArrayList<>();
-    //    trigOption.add("Degrees");
-    //    trigOption.add("Radians");
-    //}
+    private static void addTrigMode() {
+        List<String> trigOption = new ArrayList<>();
+        trigOption.add("Degrees");
+        trigOption.add("Radians");
+    }
+
+    public static void switchTrigMode() {
+        addTrigMode();
+    }
 
     public static String switchTrigMode(String input) {
         String mode = input;
