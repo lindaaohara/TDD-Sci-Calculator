@@ -17,6 +17,8 @@ public class BasicCalculatorImpTest {
         //When
         Double expected = 8.0;
         Double actual = basicCalculatorImp.add(3.0);
+
+        //Then
         Assert.assertEquals(expected, actual, 0.0);
     }
 
@@ -75,25 +77,40 @@ public class BasicCalculatorImpTest {
     }
 
     @Test
-    public void sq()  throws Exception {
+    public void testSquare()  throws Exception {
         //Given
         BasicCalculatorImp basicCalculatorImp = new BasicCalculatorImp();
-        basicCalculatorImp.memory.setCurrentValue(6.0);
+        basicCalculatorImp.memory.setCurrentValue(0.0);
 
 
         //When
         Double expected = 36.0;
-        Double actual = basicCalculatorImp.sq(6.0);
+        Double actual = basicCalculatorImp.square(6.0);
 
         //Then
        Assert.assertEquals(expected,actual, 0.0);
     }
 
     @Test
-    public void sqrt() {
+    public void testRaiseToPower() throws Exception {
+       //Given
+        BasicCalculatorImp basicCalculatorImp = new BasicCalculatorImp();
+        basicCalculatorImp.memory.setCurrentValue(4.0);
+
+
+        //When
+        Double expected = 64.0;
+        Double actual = basicCalculatorImp.raiseToPower(3.0);
+
+        //Then
+        Assert.assertEquals(expected,actual, 0.0);
+    }
+
+    @Test
+    public void testSqrt() {
         //Given
         BasicCalculatorImp basicCalculatorImp = new BasicCalculatorImp();
-        basicCalculatorImp.memory.setCurrentValue(6.0);
+        basicCalculatorImp.memory.setCurrentValue(0.0);
 
         //When
         Double expected = 6.0;
@@ -102,4 +119,32 @@ public class BasicCalculatorImpTest {
         //Then
         Assert.assertEquals(expected,actual);
     }
-}
+    @Test
+    public void testInvertSign() {
+        //Given
+        BasicCalculatorImp basicCalculatorImp = new BasicCalculatorImp();
+        basicCalculatorImp.memory.setCurrentValue(0.0);
+
+        //When
+        Double expected = -5.0;
+        Double actual = basicCalculatorImp.invertSign(5.0);
+
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testInverseofDisplay(){
+        //Given
+        BasicCalculatorImp basicCalculatorImp = new BasicCalculatorImp();
+        basicCalculatorImp.memory.setCurrentValue(0.0);
+
+        //When
+        Double expected = .20;
+        Double actual = basicCalculatorImp.inverseOfDisplay(5.0);
+
+        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+    }

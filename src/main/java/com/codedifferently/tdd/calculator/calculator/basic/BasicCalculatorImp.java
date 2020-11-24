@@ -44,16 +44,22 @@ public class BasicCalculatorImp implements Calculator{
         if(input==0) {
             throw new IllegalArgumentException("Cannot Divide by Zero");
         }
-        Double quot = memory.recallCurrentValue() / input;
-        memory.setCurrentValue(quot);
-        return quot;
+        Double quotient = memory.recallCurrentValue() / input;
+        memory.setCurrentValue(quotient);
+        return quotient;
 
     }
 
-    protected Double sq(Double input){
-       Double square = input * input;
-       memory.setCurrentValue(square);
-        return square;
+    protected Double square(Double input){
+       Double squared = input * input;
+       memory.setCurrentValue(squared);
+        return squared;
+    }
+
+    protected Double raiseToPower(Double input) {
+        Double variableExponent = Math.pow(memory.recallCurrentValue(), input);
+        memory.setCurrentValue(variableExponent);
+        return variableExponent;
     }
 
     protected Double sqrt(Double input) {
@@ -61,4 +67,16 @@ public class BasicCalculatorImp implements Calculator{
         memory.setCurrentValue(root);
         return root;
     }
+    protected Double invertSign(Double input){
+        Double invertedSign = input * -1;
+        memory.setCurrentValue(invertedSign);
+        return invertedSign;
+    }
+
+    protected Double inverseOfDisplay(Double input){
+        Double inverse = 1/input;
+        memory.setCurrentValue(inverse);
+        return inverse;
+    }
 }
+
